@@ -299,11 +299,27 @@ section p {
     text-decoration: underline; /* Remove underline on hover for a cleaner look */
 }
 
+.contact-link strong {
+    font-style: normal; /* Ensures names are not italicized */
+}
 
 
 
 
+.no-underline {
+    text-decoration: none;
+}
 
+h2, h3, .project-title {
+    font-style: normal; /* Ensures headings are not italic */
+}
+table, td {
+    border: none;
+}
+
+a, img, .contact-link {
+    border: none;
+}
 
 
 

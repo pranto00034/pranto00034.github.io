@@ -320,6 +320,21 @@ table, td {
 a, img, .contact-link {
     border: none;
 }
+.education-item p strong {
+    font-style: normal; /* Ensures the text inside the <strong> is not italic */
+}
+.project-description ul li {
+    font-style: normal; /* Ensures that the <li> items are not italicized */
+}
+/* Remove italic from the education section, except CGPA */
+#education p:not(.cgpa) {
+    font-style: normal;
+}
+
+/* Optional: Add a class to the CGPA paragraph to preserve its italic style */
+.cgpa {
+    font-style: italic;
+}
 
 
 

@@ -10,11 +10,53 @@ body {
     background-color: #f9f9f9;
 }
 
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Scroll-to-Top Button Styles */
+#scrollToTopBtn {
+    display: none; /* Hide the button by default */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #3e4044; /* Button color */
+    color: white;
+    border: none;
+    border-radius: 30%; /* Circle shape */
+    padding: 10px 15px;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth animations */
+}
+
+#scrollToTopBtn:hover {
+    background-color: #000000; /* Darker blue on hover */
+    transform: scale(1.1); /* Slightly enlarge */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .container {
     display: flex;
     width: 100%;
     max-width: 1000px;
-    margin-left: 220px;
+    margin-left: 180px;
 }
 
 .navbar {
@@ -47,6 +89,78 @@ body {
 .navbar ul li a:hover {
     text-decoration: underline;
 }
+
+.navbar ul li a.active {
+    color: #000000; /* Highlighted color */
+    font-weight: bold;
+    border-left: 3px solid #000000; /* Add a left border */
+    padding-left: 5px; /* Add spacing for the border */
+}
+
+
+
+
+
+
+.social-links {
+    text-align: center;
+    margin-top: 5px;
+    font-size: 18px; /* Adjust icon size */
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between icons */
+}
+
+.social-links a {
+    color: #4a4d4e; /* Icon color */
+    text-decoration: none;
+    position: relative; /* For tooltip positioning */
+}
+
+.social-links a:hover {
+    color: #0056b3; /* Highlight color on hover */
+}
+
+/* Tooltip styles */
+.tooltip-text {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    bottom: -30px; /* Position below the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333; /* Tooltip background */
+    color: white;
+    text-align: center;
+    padding: 5px 8px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.para-link {
+    font-weight: bold;         /* Make the text bold */
+    text-decoration: none;     /* Remove underline */
+    color: #333;            /* Optional: Add a color */
+}
+
+.para-link:hover {
+    color: #0056b3;            /* Change color on hover (optional) */
+}
+
+
+
+
+
+
+
 
 .mobile-menu-button {
     display: none;
@@ -348,20 +462,10 @@ a, img, .contact-link {
     object-fit: cover;
 }
 
-.social-links {
-    text-align: center;
-    margin-top: 5px;
-    font-size: 12px;
-}
 
-.social-links a {
-    color: #0073e6;
-    text-decoration: none;
-}
 
-.social-links a:hover {
-    text-decoration: underline;
-}
+
+
 
 html {
     scroll-behavior: smooth;

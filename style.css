@@ -162,6 +162,40 @@ html {
 
 
 
+
+
+.highlights-button-container {
+    text-align: center; /* Center the button */
+    margin-top: 1rem; /* Add space above the button */
+}
+
+.highlights-page-button {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #ffffff; /* Button background color */
+    color: #000000; /* Text color */
+    font-size: 14px; /* Font size */
+    padding: 8px 15px; /* Button padding */
+    border: 2px solid #000000; /* Add black border */
+    border-radius: 15px; /* Rounded corners */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    
+}
+
+.highlights-page-button:hover {
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+
+
+
+
+
+
+
+
+
+
 .mobile-menu-button {
     display: none;
     font-size: 24px;

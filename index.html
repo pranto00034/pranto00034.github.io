@@ -18,6 +18,163 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
         <style>
+            body {
+                margin: 0;
+                padding: 0;
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .container {
+                flex: 1;
+                padding: 20px;
+                margin: 0 auto;
+                width: 100%;
+                max-width: 1200px;
+                box-sizing: border-box;
+            }
+
+            .content {
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 20px;
+                margin-top: 40px;
+            }
+
+            .footer {
+                text-align: center;
+                padding: 20px;
+                background-color: #fff;
+                border-top: 1px solid #eee;
+            }
+
+            /* Profile image styles */
+            .profile-image {
+                display: block;
+                width: 200px;
+                height: 200px;
+                margin: 20px auto;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+
+            /* Section styles */
+            section {
+                margin-bottom: 40px;
+            }
+
+            h1 {
+                text-align: center;
+                color: #333;
+                margin-bottom: 20px;
+            }
+
+            h2 {
+                color: #1976d2;
+                margin-bottom: 20px;
+            }
+
+            /* Base navbar styles */
+            .navbar ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+            }
+
+            .navbar a {
+                color: #1976d2;
+                text-decoration: none;
+                font-weight: 500;
+                padding: 10px;
+            }
+
+            .navbar a:hover {
+                background: #e6f0fa;
+                border-radius: 4px;
+            }
+
+            /* Mobile menu styles */
+            .mobile-menu-button {
+                display: none;
+            }
+
+            .mobile-navbar {
+                display: none;
+            }
+
+            @media (max-width: 800px) {
+                .navbar {
+                    display: none;
+                }
+
+                .mobile-menu-button {
+                    display: block;
+                    position: fixed;
+                    top: 10px;
+                    right: 10px;
+                    z-index: 1000;
+                    background: none;
+                    border: none;
+                    font-size: 24px;
+                    color: #1976d2;
+                    cursor: pointer;
+                    width: 40px;
+                    height: 40px;
+                    padding: 0;
+                }
+
+                .mobile-navbar {
+                    display: none;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(255, 255, 255, 0.98);
+                    z-index: 999;
+                }
+
+                .mobile-navbar.active {
+                    display: block;
+                }
+
+                .mobile-navbar ul {
+                    list-style: none;
+                    padding: 60px 20px 20px;
+                    margin: 0;
+                }
+
+                .mobile-navbar li {
+                    margin-bottom: 15px;
+                    text-align: center;
+                }
+
+                .mobile-navbar a {
+                    display: block;
+                    padding: 15px;
+                    color: #1976d2;
+                    text-decoration: none;
+                    font-size: 1.2rem;
+                    border-radius: 4px;
+                }
+
+                .mobile-navbar a:hover {
+                    background: #e6f0fa;
+                }
+
+                .container {
+                    padding-top: 60px;
+                }
+                .content {
+                    margin-top: 24px;
+                }
+            }
+
+            /* Rest of your existing styles */
             .education-item {
                 display: flex;
                 align-items: center;
@@ -81,6 +238,54 @@
                 align-items: center;
                 gap: 18px;
             }
+            /* Scroll-to-Top Button */
+            #scrollToTopBtn {
+                display: none;
+                position: fixed;
+                bottom: 20px;
+                right: 30px;
+                z-index: 999;
+                font-size: 18px;
+                border: none;
+                outline: none;
+                background-color: #1976d2;
+                color: white;
+                cursor: pointer;
+                padding: 15px;
+                border-radius: 4px;
+                transition: background-color 0.3s;
+            }
+            #scrollToTopBtn:hover {
+                background-color: #0d47a1;
+            }
+
+            /* Research styles */
+            .research-item {
+                margin-bottom: 30px;
+                padding: 20px;
+                background: #f8f9fa;
+                border-radius: 8px;
+            }
+
+            .research-item strong {
+                display: block;
+                margin-bottom: 10px;
+                color: #333;
+            }
+
+            .chat-box {
+                margin-top: 15px;
+                line-height: 1.6;
+            }
+
+            .status {
+                color: #666;
+                margin: 10px 0;
+            }
+
+            .author-text {
+                color: #666;
+            }
         </style>
     </head>
     
@@ -92,10 +297,8 @@
         <nav class="navbar">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="conference.html">Conferences</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="fieldtrips.html">Field Works</a></li>
-                <!-- <li><a href="#education">Education</a></li> -->
                 <li><a href="beyond.html">Beyond Academics</a></li>
             </ul>
         </nav>
@@ -109,60 +312,25 @@
         <nav class="mobile-navbar" id="mobile-navbar">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="conference.html">Conferences</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="fieldtrips.html">Field Works</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#beyond">Beyond Academics</a></li>
+                <li><a href="beyond.html">Beyond Academics</a></li>
             </ul>
         </nav>
 
-
-
-        <!-- Scroll-to-Top Button -->
-        <button id="scrollToTopBtn" title="Go to top">↑</button>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         <!-- Main Content -->
         <div class="content">
-
-
             <section id="about">
-                <h1>Pranto Roy</h1> <!-- Name displayed prominently -->
-                <img src="images/CV_pic.png" alt="Pranto Roy" class="profile-image"> <!-- Add your image here -->
-
-
-                
-           
-                
+                <h1>Pranto Roy</h1>
+                <img src="images/CV_pic.png" alt="Pranto Roy" class="profile-image">
 
                 <div class="social-links">
                     <a href="https://drive.google.com/file/d/1FRn8_a3BY5DTikPFkZi1iyW_W67ximLw/view?usp=sharing" target="_blank" class="cv-link">CV</a>
                     <a href="mailto:prantoroy00034@gmail.com" class="email-link">Email</a>
                 </div>
 
-                <p>I am an Earth Science enthusiast with a deep interest in studying past environments, events, and climate using approaches such as proxies, stable isotope analysis, computer-based models, etc. I am also interested in studying ocean acoustics and marine mammal acoustics. Apart from academics, I have a deep passion for music and photography and have expertise in music production, songwriting, and video editing.
-                    </p>
+                <p>I am an Earth Science enthusiast with a deep interest in studying past environments, events, and climate using approaches such as proxies, stable isotope analysis, computer-based models, etc. I am also interested in studying ocean acoustics and marine mammal acoustics. Apart from academics, I have a deep passion for music and photography and have expertise in music production, songwriting, and video editing.</p>
             </section>
-
-
 
             <section id="research-interests">
                 <h2>Research Interests</h2>
@@ -170,53 +338,38 @@
                     <li>Paleoceanography</li>
                     <li>Paleoclimatology</li>
                     <li>Paleontology</li>
-                    <!-- <li>Ocean acoustics</li> -->
                     <li>Marine-mammal acoustics</li>
-                    
                 </ul>
             </section>
             
-
-
-
-     <section id="research">
+            <section id="research">
                 <h2>Research Experience</h2>
-            
                 <div class="research-item">
-                    <strong>Screening of antibacterial activities of Seaweed<em>(Gracilaria sp.)</em> and Sea Anemone<em>(Diadumene lineata)</em> collected from the coastal area of Bangladesh
-                    </strong>
+                    <strong>Screening of antibacterial activities of Seaweed<em>(Gracilaria sp.)</em> and Sea Anemone<em>(Diadumene lineata)</em> collected from the coastal area of Bangladesh</strong>
                     <p class="status"><em>Undergraduate Research Project</em> | <em>2023</em></p>
                     <div class="chat-box">
-                        
-                        <p>The research aimed to investigate the antimicrobial activities of Seaweed <em>(Gracilaria sp.)</em> and Sea anemone <em>(Diadumene lineata)</em>, focusing on harnessing natural resources for developing alternative antimicrobial agents amid rising antibiotic resistance. The study's significance is rooted in addressing public health concerns over antibiotic-resistant pathogens by exploring seaweed and sea anemones as potential sources of novel antimicrobial compounds. The study's conclusion underlines the significant antimicrobial potential of <em>Diadumene lineata</em>, particularly against gram-positive bacteria <em>Staphylococcus aureus</em> and gram-negative bacteria <em>E. Coli</em> and <em>Klebsiella pneumoniae</em>. The outcomes suggest the need for comprehensive studies to understand the chemical compounds responsible for the antimicrobial activities, advocating for the utilization of these marine organisms in developing new pharmaceuticals or drug adjuvants to augment the efficacy of existing medications </p>
-                        <p><i><span class="author-text"> Supervisors: Faisal Sobhan, Moshiul Alam Mishu</i></span></p>
+                        <p>The research aimed to investigate the antimicrobial activities of Seaweed <em>(Gracilaria sp.)</em> and Sea anemone <em>(Diadumene lineata)</em>, focusing on harnessing natural resources for developing alternative antimicrobial agents amid rising antibiotic resistance. The study's significance is rooted in addressing public health concerns over antibiotic-resistant pathogens by exploring seaweed and sea anemones as potential sources of novel antimicrobial compounds. The study's conclusion underlines the significant antimicrobial potential of <em>Diadumene lineata</em>, particularly against gram-positive bacteria <em>Staphylococcus aureus</em> and gram-negative bacteria <em>E. Coli</em> and <em>Klebsiella pneumoniae</em>. The outcomes suggest the need for comprehensive studies to understand the chemical compounds responsible for the antimicrobial activities, advocating for the utilization of these marine organisms in developing new pharmaceuticals or drug adjuvants to augment the efficacy of existing medications</p>
+                        <p><i><span class="author-text">Supervisors: Faisal Sobhan, Moshiul Alam Mishu</span></i></p>
                     </div>
-                    
-    </section>
-                  
-     
-        <!-- <section id="conference">
-            <h2>Conference Papers & Poster Presentations</h2>
-        
-            <div class="research-item">
-                <strong>Screening of antibacterial activities of Seaweed<em>(Gracilaria sp.)</em> and Sea anemone<em>(Diadumene lineata)</em> collected from the coastal area of Bangladesh
-                </strong>
-                <p class="status"><em>Authors: Pranto Roy, Md Shahadat Hossain, Faisal Sobhan, Moshiul Alam Mishu</em></p>
-                               <div class="chat-box">
-                  
-                    <p><i><span class="author-text">Poster Presentation; ICO 2024: International Conference on Oceanography </em> | <em>January 2024 </i></span></p>
                 </div>
-                <div class="links">
-                    <a href="http://dx.doi.org/10.13140/RG.2.2.28919.23200/1" target="_blank" class="links"><em>DOI</em></a>
+            </section>
+
+            <section id="conference">
+                <h2>Poster Presentations</h2>
+                <div class="research-item">
+                    <strong>Screening of antibacterial activities of Seaweed<em>(Gracilaria sp.)</em> and Sea anemone<em>(Diadumene lineata)</em> collected from the coastal area of Bangladesh</strong>
+                    <p class="status"><em>Authors: Pranto Roy, Md Shahadat Hossain, Faisal Sobhan, Moshiul Alam Mishu</em></p>
+                    <div class="chat-box">
+                        <p><i><span class="author-text">Poster Presentation; ICO 2024: International Conference on Oceanography </em> | <em>January 2024 </i></span></p>
+                    </div>
+                    <div class="links">
+                        <a href="http://dx.doi.org/10.13140/RG.2.2.28919.23200/1" target="_blank" class="links"><em>DOI</em></a>
+                    </div>
                 </div>
-            </div>
-         </section>
-         -->
-         
+            </section>
     
             <section id="education">
                 <h2>Education</h2>
-                
                 <div class="education-item">
                     <img src="images/wwu-logo.png" alt="WWU Logo" class="education-logo">
                     <div class="education-details">
@@ -245,39 +398,48 @@
                         <p>Notre Dame College, Dhaka</p>
                     </div>
                 </div>
-            
-                <!-- <div class="education-item">
-                    <img src="images/naogaon-logo.png" alt="Naogaon K.D Govt. High School Logo" class="education-logo">
-                    <div class="education-details">
-                        <p><strong>Secondary School Certificate</strong> <em>[2014 - 2016]</em></p>
-                        <p><em>GPA: 5 (out of 5.00)</em></p>
-                        <p>Naogaon K.D Govt. High School, Naogaon, Rajshahi, Bangladesh</p>
-                    </div>
-                </div> -->
             </section>
+        </div>
+    </div>
 
+    <!-- Scroll-to-Top Button -->
+    <button id="scrollToTopBtn" title="Go to top">↑</button>
 
+    <footer class="footer">
+        &copy; <i>Pranto Roy</i>
+    </footer>
+    <script>
+        // Mobile menu functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileNavbar = document.getElementById('mobile-navbar');
 
+        if (mobileMenuButton && mobileNavbar) {
+            mobileMenuButton.addEventListener('click', function(e) {
+                e.stopPropagation();
+                mobileNavbar.classList.toggle('active');
+            });
 
+            // Close menu when clicking anywhere on the mobile menu
+            mobileNavbar.addEventListener('click', function() {
+                mobileNavbar.classList.remove('active');
+            });
+        }
 
+        // Scroll to top functionality
+        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+        
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopBtn.style.display = 'block';
+            } else {
+                scrollToTopBtn.style.display = 'none';
+            }
+        };
 
-<script src="script.js"></script> <!-- Link to JavaScript file -->
-<footer class="footer">
-    &copy; <i>Pranto Roy</i>
-</footer>
-<script>
-  // Hamburger menu toggle for mobile
-  const mobileMenuButton = document.getElementById('mobile-menu-button');
-  const mobileNavbar = document.getElementById('mobile-navbar');
-  mobileMenuButton.addEventListener('click', function() {
-    mobileNavbar.classList.toggle('active');
-  });
-  // Optional: close menu when a link is clicked
-  document.querySelectorAll('.mobile-navbar a').forEach(link => {
-    link.addEventListener('click', () => {
-      mobileNavbar.classList.remove('active');
-    });
-  });
-</script>
+        scrollToTopBtn.addEventListener('click', function() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        });
+    </script>
 </body>
 </html>

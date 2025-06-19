@@ -102,7 +102,7 @@
 
         <!-- Mobile Menu Button -->
         <div class="mobile-menu-button" id="mobile-menu-button">
-            ☰
+            &#9776;
         </div>
 
         <!-- Mobile Navbar -->
@@ -112,7 +112,7 @@
                 <li><a href="conference.html">Conferences</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="fieldtrips.html">Field Works</a></li>
-                <!-- <li><a href="#education">Education</a></li> -->
+                <li><a href="#education">Education</a></li>
                 <li><a href="#beyond">Beyond Academics</a></li>
             </ul>
         </nav>
@@ -263,7 +263,21 @@
 
 <script src="script.js"></script> <!-- Link to JavaScript file -->
 <footer class="footer">
-    &copy; Pranto Roy
+    &copy; <i>Pranto Roy</i>
 </footer>
+<script>
+  // Hamburger menu toggle for mobile
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileNavbar = document.getElementById('mobile-navbar');
+  mobileMenuButton.addEventListener('click', function() {
+    mobileNavbar.classList.toggle('active');
+  });
+  // Optional: close menu when a link is clicked
+  document.querySelectorAll('.mobile-navbar a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileNavbar.classList.remove('active');
+    });
+  });
+</script>
 </body>
 </html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conferences - Pranto Roy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/sitelogo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+      .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding-left: 1.5rem;
+        background: none;
+        box-shadow: none;
+      }
+      .back-arrow-fixed {
+        position: fixed;
+        top: 50%;
+        left: 18px;
+        transform: translateY(-50%);
+        z-index: 2000;
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+      }
+      .back-arrow-fixed svg {
+        width: 44px;
+        height: 44px;
+      }
+      @media (max-width: 600px) {
+        .navbar {
+          padding-left: 0.5rem;
+        }
+        .back-arrow-fixed {
+          left: 4px;
+        }
+        .back-arrow-fixed svg {
+          width: 36px;
+          height: 36px;
+        }
+      }
+      .content h2 {
+        text-align: center;
+        font-size: 2.1rem;
+        margin-bottom: 1.5rem;
+        font-weight: 700;
+      }
+      .container {
+        display: block;
+        width: 100%;
+        max-width: 1000px;
+        margin: 16px auto 0 auto;
+        padding: 0 20px;
+      }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-arrow-fixed" title="Back to Home">
+        <svg width="44" height="44" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="22" height="22" rx="7" fill="#111"/>
+            <path d="M14.5 11H7.5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M10 8.5L7.5 11L10 13.5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </a>
+    
+    <div class="container">
+        <div class="content">
+            <section id="conference">
+                <h2>Poster Presentations</h2>
+                <div class="research-item">
+                    <strong>Screening of antibacterial activities of Seaweed<em>(Gracilaria sp.)</em> and Sea anemone<em>(Diadumene lineata)</em> collected from the coastal area of Bangladesh
+                    </strong>
+                    <p class="status"><em>Authors: Pranto Roy, Md Shahadat Hossain, Faisal Sobhan, Moshiul Alam Mishu</em></p>
+                    <div class="chat-box">
+                        <p><i><span class="author-text">Poster Presentation; ICO 2024: International Conference on Oceanography </em> | <em>January 2024 </i></span></p>
+                    </div>
+                    <div class="links">
+                        <a href="http://dx.doi.org/10.13140/RG.2.2.28919.23200/1" target="_blank" class="links"><em>DOI</em></a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html> 

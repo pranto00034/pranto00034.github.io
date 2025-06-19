@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beyond Academics - Pranto Roy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/sitelogo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+      /* Only left-align the Leadership & Honors section, keep original card size/style */
+      #leadership {
+        margin-left: 0;
+        margin-right: auto;
+        padding: 0 0 2rem 0;
+      }
+      .back-arrow-fixed {
+        position: fixed;
+        top: 50%;
+        left: 18px;
+        transform: translateY(-50%);
+        z-index: 2000;
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+      }
+      .back-arrow-fixed svg {
+        width: 44px;
+        height: 44px;
+      }
+      @media (max-width: 600px) {
+        .back-arrow-fixed {
+          left: 4px;
+        }
+        .back-arrow-fixed svg {
+          width: 36px;
+          height: 36px;
+        }
+      }
+      .leadership-info h3,
+      .leadership-info h4 {
+        font-size: 1.05rem;
+        margin: 0.2rem 0;
+      }
+      .leadership-info ul {
+        font-size: 0.97rem;
+        margin: 0.2rem 0 0 1.1rem;
+        padding: 0;
+      }
+      .main-section-title {
+        text-align: center;
+        font-size: 2.1rem;
+        margin-bottom: 1.5rem;
+        font-weight: 700;
+      }
+      .container {
+        display: block;
+        width: 100%;
+        max-width: 1000px;
+        margin: 16px auto 0 auto;
+        padding: 0 20px;
+      }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-arrow-fixed" title="Back to Home">
+      <svg width="44" height="44" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="22" height="22" rx="7" fill="#111"/>
+        <path d="M14.5 11H7.5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M10 8.5L7.5 11L10 13.5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+    <div class="container">
+        <div class="content">
+            <h2 class="main-section-title">Beyond Academics</h2>
+            <section id="leadership">
+                <h3 class="project-title" style="text-align:left; margin-bottom:1.2rem;">Leadership & Awards</h3>
+                <div class="leadership-carousel">
+                  <button class="carousel-arrow left">&#8592;</button>
+                  <div class="carousel-track">
+                    <div class="leadership-card">
+                      <img src="images/highlights/supa.jpg" alt="Publicity Secretary" class="leadership-img">
+                      <div class="leadership-info">
+                        <h3>Publicity Secretary (2022-2023)</h3>
+                        <h4>Shahjalal University Photographers Association (SUPA)</h4>
+                        <ul>
+                          <li>Organised an international photography exhibition "II5"</li>
+                          <li>Organised an intra-university photography exhibition "Hiraeth V"</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="leadership-card">
+                      <img src="images/highlights/borendro-association.png" alt="Organising Secretary" class="leadership-img">
+                      <div class="leadership-info">
+                        <h3>Organising Secretary (2021-2022)</h3>
+                        <h4>Barendro Association</h4>
+                        <ul>
+                          <li>Organised and managed two cultural events</li>
+                          <li>Developed leadership, communication, and organizational skills</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- <div class="leadership-card">
+                      <img src="images/highlights/Tomar-amar-muhurto.jpg" alt="Honorable Lifetime Member" class="leadership-img">
+                      <div class="leadership-info">
+                        <h3>Honorable Lifetime Member (2019-Present)</h3>
+                        <h4>Notre Dame Cultural Club</h4>
+                        <ul>
+                          <li>add here</li>
+                          <li>add here</li>
+                        </ul>
+                      </div>
+                    </div> -->
+                    <div class="leadership-card">
+                      <img src="images/highlights/notre-dame-cultural-club.png" alt="General Secretary" class="leadership-img">
+                      <div class="leadership-info">
+                        <h3>General Secretary (2018-2019)</h3>
+                        <h4>Notre Dame Cultural Club</h4>
+                        <ul>
+                          <li>Organised two intra college cultural festivals</li>
+                          <li>Honored as a lifetime member for excellent contributions</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="leadership-card">
+                      <img src="images/highlights/board-scholarship.png" alt="Board Scholarship" class="leadership-img">
+                      <div class="leadership-info">
+                        <h3>Board Scholarships</h3>
+                        <ul>
+                          <li>Scholarship for notable academic performance in Junior School Certificate (2015)</li>
+                          <li>Scholarship for notable academic performance in Secondary School Certificate (2017)</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="carousel-arrow right">&#8594;</button>
+                </div>
+            </section>
+            <section id="musician">
+                <div class="project-item">
+                    <h3 class="project-title">As a Musician</h3>
+                    <p class="status"><em>Songwriter, Composer, Producer, Multi-Instrumentalist</em></p>
+                    <div class="project-content">
+                        <img src="images/projects/music.gif" alt="music" class="project-image">
+                        <div class="project-description">
+                            <ul>
+                                <li>Founder, Songwriter, Producer & Multi-Instrumentalist at <a href="https://www.youtube.com/prtds" class="no-underline">PRTD's</a></li>
+                                <li>Keyboardist at <a href="https://www.youtube.com/@GolpoOfficial" class="no-underline">Golpo</a></li>
+                                <li>Founder, Composer, Producer at <a href="https://www.youtube.com/@thediaryafterevening/" class="no-underline">The Diary After Evening</a></li>
+                                <li>Founder, Composer & Producer of <a href="https://www.youtube.com/@musicbysleepypanda" class="no-underline">Sleepy Panda</a>, my solo project</li>
+                                <li>Worked as a Composer & Producer with <a href="https://www.youtube.com/channel/UCjI9EgQ0pPi-Z1R1J5qmQiQ" class="no-underline">Rude Boy</a> on his projects</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <h3 class="project-title">As a Photographer</h3>
+                    <p class="status"><em>Visual Art Enthusiast</em></p>
+                    <div class="project-content">
+                        <img src="images/projects/photos.gif" alt="photo" class="project-image">
+                        <div class="project-description">
+                            <ul>
+                               <em> Where our eyes are never closing<br>
+                                Hearts are never broken <br>
+                                And time's forever frozen still<br>
+                                ~Ed Sheeran       </em>
+                                <li>One of my photos was selected for <a href="https://supasust.org/hiraeth/" class="no-underline">"Hiraeth V"</a>, an Intra-University Photographic exhibition organised by SUPA.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script>
+    const cards = document.querySelectorAll('.leadership-card');
+    const leftBtn = document.querySelector('.carousel-arrow.left');
+    const rightBtn = document.querySelector('.carousel-arrow.right');
+    let current = 0;
+
+    function showCard(idx) {
+      cards.forEach((card, i) => {
+        card.classList.toggle('active', i === idx);
+      });
+    }
+    leftBtn.addEventListener('click', () => {
+      current = (current - 1 + cards.length) % cards.length;
+      showCard(current);
+    });
+    rightBtn.addEventListener('click', () => {
+      current = (current + 1) % cards.length;
+      showCard(current);
+    });
+    showCard(current);
+    </script>
+</body>
+</html> 

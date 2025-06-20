@@ -39,7 +39,7 @@
                 max-width: 800px;
                 margin: 0 auto;
                 padding: 20px;
-                margin-top: 40px;
+                margin-top: 4px;
             }
 
             .footer {
@@ -63,13 +63,13 @@
 
             /* Section styles */
             section {
-                margin-bottom: 40px;
+                margin-bottom: 10px;
             }
 
             h1 {
                 text-align: center;
                 color: #333;
-                margin-bottom: 20px;
+                margin-bottom: 10px;
             }
 
             h2 {
@@ -80,7 +80,7 @@
             /* Base navbar styles */
             .navbar ul {
                 list-style: none;
-                padding: 0;
+                padding:0;
                 margin: 0;
                 display: flex;
                 justify-content: center;
@@ -174,6 +174,8 @@
                 .content {
                     padding: 10px;
                     margin-top: 20px;
+                    padding-right: 16px !important;
+                    padding-left: 10px !important;
                 }
                 .footer {
                     padding: 15px 0;
@@ -182,6 +184,13 @@
                     text-align: center;
                     background: none;
                     border: none;
+                }
+                img {
+                    transform: scale(1.25);
+                    transition: transform 0.2s;
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
                 }
             }
 
@@ -297,49 +306,280 @@
             .author-text {
                 color: #666;
             }
+
+            /* Sidebar styles for desktop */
+            .sidebar {
+                width: 260px;
+                min-width: 220px;
+                max-width: 300px;
+                padding: 80px 10px 10px 10px;
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background: none;
+                border: none;
+            }
+            .sidebar-profile-block {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+                margin-bottom: 18px;
+            }
+            .sidebar-title, .sidebar-link {
+                text-align: left;
+                justify-content: flex-start;
+            }
+            .sidebar-title {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                font-size: 2rem;
+                font-weight: bold;
+                color: #535050;
+                text-decoration: none;
+                transition: none;
+                cursor: default;
+            }
+            /* Remove hover effect for sidebar-title */
+            .sidebar-title:hover {
+                color: #535050;
+            }
+            .sidebar-link {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                font-size: 1rem;
+                color: #535050;
+                text-decoration: none;
+                font-weight: 500;
+                transition: color 0.2s, text-decoration 0.2s;
+            }
+            .sidebar-link[href]:hover {
+                color: #1976d2;
+                text-decoration: underline;
+            }
+            /* No hover for MS Student, Pranto Roy, and location */
+            .sidebar-title, .sidebar-link:not([href]) {
+                color: #535050;
+                cursor: default;
+                text-decoration: none;
+            }
+            .sidebar-name, .smaller-sidebar-name {
+                display: none;
+            }
+            @media (max-width: 800px) {
+                .container {
+                    flex-direction: column !important;
+                }
+                .sidebar {
+                    display: none !important;
+                }
+            }
+            @media (min-width: 801px) {
+                .container {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: flex-start;
+                }
+                .sidebar {
+                    display: flex;
+                }
+                .content {
+                    max-width:800px;
+                    margin: 0 auto;
+                    padding: 20px;
+                    margin-top: 40px;
+                    flex: 1;
+                }
+            }
+
+            /* Navbar alignment styles for desktop */
+            .navbar {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                padding: 0 80px 0 0;
+                margin-bottom: 0;
+                background: none;
+                border: none;
+                box-shadow: none;
+            }
+            .navbar-right {
+                display: flex;
+                gap: 20px;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+            .navbar-right li {
+                display: flex;
+                align-items: center;
+            }
+            .navbar-right a {
+                color: rgba(0, 0, 0, 0.65);
+                text-decoration: none;
+                font-weight: 500;
+                padding: 10px;
+                transition: color 0.2s, font-weight 0.2s;
+            }
+            .navbar-right a:hover {
+                color: #a6c3e0;
+                background: #e6f0fa;
+                border-radius: 4px;
+                font-weight: 700;
+            }
+            @media (max-width: 800px) {
+                .navbar {
+                    display: none;
+                }
+            }
+
+            /* Mobile Header styles */
+            .mobile-header {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 16px 0 0 0;
+                margin: 0;
+                background: none;
+                border: none;
+                box-shadow: none;
+                width: 100%;
+                text-align: center;
+            }
+            .mobile-profile-image {
+                width: 90px;
+                height: 90px;
+                margin: 0 0 10px 0;
+                display: block;
+            }
+            .mobile-header-name {
+                font-size: 1.22rem;
+                font-weight: bold;
+                color: #535050;
+                margin-bottom: 3px;
+                text-align: center;
+            }
+            .mobile-header-role {
+                font-size: 1.01rem;
+                color: #535050;
+                margin-bottom: 2px;
+                text-align: center;
+            }
+            .mobile-header-location {
+                font-size: 0.98rem;
+                color: #535050;
+                margin-bottom: 7px;
+                text-align: center;
+            }
+            .mobile-header-links {
+                display: flex;
+                gap: 18px;
+                margin-bottom: 0;
+                justify-content: center;
+            }
+            .mobile-header-links a {
+                color: #1976d2;
+                font-size: 1.22rem;
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: color 0.2s;
+            }
+            .mobile-header-links a:hover {
+                color: #0d47a1;
+            }
+            @media (max-width: 800px) {
+                .mobile-header {
+                    display: flex !important;
+                }
+                .sidebar {
+                    display: none !important;
+                }
+                .navbar {
+                    display: none !important;
+                }
+                .mobile-menu-button {
+                    display: block !important;
+                }
+                .mobile-navbar {
+                    display: none;
+                }
+                .mobile-navbar.active {
+                    display: block;
+                }
+                .container {
+                    margin-top: 0 !important;
+                    padding-top: 0 !important;
+                }
+                .content {
+                    margin-top: 0 !important;
+                    padding-top: 0 !important;
+                    padding-right: 16px !important;
+                    padding-left: 10px !important;
+                }
+            }
         </style>
     </head>
     
 <body>
+    <!-- Mobile Header (visible only on mobile) -->
+    <div class="mobile-header">
+        <img src="images/CV_pic.png" alt="Pranto Roy" class="profile-image mobile-profile-image">
+        <div class="mobile-header-name">Pranto Roy</div>
+        <div class="mobile-header-role">MS Student</div>
+        <div class="mobile-header-location">Bellingham, WA, USA</div>
+        <div class="mobile-header-links">
+            <a href="mailto:prantoroy00034@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://drive.google.com/file/d/1FRn8_a3BY5DTikPFkZi1iyW_W67ximLw/view?usp=sharing" target="_blank"><i class="fas fa-file-alt"></i></a>
+        </div>
+    </div>
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-button" id="mobile-menu-button" aria-label="Open navigation" style="display: none;">
+        <i class="fas fa-bars"></i>
+    </button>
+    <!-- Mobile Navbar -->
+    <nav class="mobile-navbar" id="mobile-navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="fieldtrips.html">Field Works</a></li>
+            <li><a href="beyond.html">Beyond Academics</a></li>
+            
+        </ul>
+    </nav>
 
     <!-- Container for Content -->
-    <div class="container">
+    <div class="container" style="display: flex; flex-direction: row; align-items: flex-start;">
+        <!-- Sidebar for Profile (Desktop only) -->
+        <aside class="sidebar">
+            <img src="images/CV_pic.png" alt="Pranto Roy" class="profile-image">
+            <div class="sidebar-profile-block">
+                <a class="sidebar-title">Pranto Roy</a>
+                <!-- <a class="sidebar-link"><i class="fas fa-graduation-cap"></i> MS Student</a>
+                <a class="sidebar-link"><i class="fas fa-map-marker-alt"></i> Bellingham, WA, USA</a> -->
+                <a href="mailto:prantoroy00034@gmail.com" class="sidebar-link"><i class="fas fa-envelope"></i> Email</a>
+                <a href="https://drive.google.com/file/d/1FRn8_a3BY5DTikPFkZi1iyW_W67ximLw/view?usp=sharing" target="_blank" class="sidebar-link"><i class="fas fa-file-alt"></i> CV</a>
+            </div>
+        </aside>
         <!-- Navbar for Desktop -->
         <nav class="navbar">
-            <ul>
+            <ul class="navbar-right">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="fieldtrips.html">Field Works</a></li>
                 <li><a href="beyond.html">Beyond Academics</a></li>
+                
             </ul>
         </nav>
-
-        <!-- Mobile Menu Button -->
-        <div class="mobile-menu-button" id="mobile-menu-button">
-            &#9776;
-        </div>
-
-        <!-- Mobile Navbar -->
-        <nav class="mobile-navbar" id="mobile-navbar">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="fieldtrips.html">Field Works</a></li>
-                <li><a href="beyond.html">Beyond Academics</a></li>
-            </ul>
-        </nav>
-
         <!-- Main Content -->
         <div class="content">
             <section id="about">
-                <h1>Pranto Roy</h1>
-                <img src="images/CV_pic.png" alt="Pranto Roy" class="profile-image">
-
-                <div class="social-links">
-                    <a href="https://drive.google.com/file/d/1FRn8_a3BY5DTikPFkZi1iyW_W67ximLw/view?usp=sharing" target="_blank" class="cv-link">CV</a>
-                    <a href="mailto:prantoroy00034@gmail.com" class="email-link">Email</a>
-                </div>
-
+                <h2>About Me</h2>
                 <p>I am an Earth Science enthusiast with a deep interest in studying past environments, events, and climate using approaches such as proxies, stable isotope analysis, computer-based models, etc. I am also interested in studying ocean acoustics and marine mammal acoustics. Apart from academics, I have a deep passion for music and photography and have expertise in music production, songwriting, and video editing.</p>
             </section>
 

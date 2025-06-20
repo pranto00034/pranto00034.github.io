@@ -523,6 +523,11 @@
                     padding-left: 10px !important;
                 }
             }
+
+            .navbar.hide-on-scroll {
+                transform: translateY(-100%);
+                transition: transform 0.3s;
+            }
         </style>
     </head>
     
@@ -688,6 +693,21 @@
             document.body.scrollTop = 0; // For Safari
             document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         });
+
+        // Navbar hide on scroll functionality
+        let lastScrollTop = 0;
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop && scrollTop > 50) {
+                // Scrolling down
+                navbar.classList.add('hide-on-scroll');
+            } else {
+                // Scrolling up
+                navbar.classList.remove('hide-on-scroll');
+            }
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+        }, false);
     </script>
 </body>
 </html>

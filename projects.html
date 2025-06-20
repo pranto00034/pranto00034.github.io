@@ -45,10 +45,13 @@
         margin: 16px auto 0 auto;
         padding: 0 20px;
       }
+      @media (max-width: 800px) {
+        .desktop-only { display: none !important; }
+      }
     </style>
 </head>
 <body>
-    <a href="index.html" class="back-arrow-fixed" title="Back to Home">
+    <a href="index.html" class="back-arrow-fixed desktop-only" title="Back to Home">
       <svg width="44" height="44" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect width="22" height="22" rx="7" fill="#111"/>
         <path d="M14.5 11H7.5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
